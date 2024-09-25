@@ -47,3 +47,4 @@ This project was bootstrapped with React.
 
 ## Third Party API
 - Eleven labs
+- Aws A-10 
