@@ -3,8 +3,6 @@
 This project is all about voice magic:
 1.  voice cloning
 2.  text to voice
-   
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## API design
 ![voice-magic-api](https://github.com/user-attachments/assets/26a74006-8c6f-41c1-a785-4835493583bb)
@@ -41,6 +39,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
    - Plan subrsciption - stripe
 - CI/CD
   - Jenkins
+   
+This project was bootstrapped with React.
+
+## Monitor
+- datadog
 
 ## Third Party API
 - Eleven labs
