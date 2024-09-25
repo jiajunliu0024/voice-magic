@@ -17,6 +17,9 @@ This project is all about voice magic:
 |  | As a user, I want to convert my text to a specific voice, so that I can use it as voice assistant    |    high |
 |  | As a user, I want to fine-tune the voice clone’s intonation for different emotions (e.g., happy, sad, angry) so that it can deliver more expressive audio content.   |    low |
 
+## DB design
+![image](https://github.com/user-attachments/assets/155217b4-4450-447f-9183-2198a9e5da17)
+
 ## Progress tracker
 - Jira
 - conference
