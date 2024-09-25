@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Voice clone app
 
 This project is all about voice magic:
 1.  voice cloning
@@ -19,6 +19,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 |  | As a user, I want to convert my text to a specific voice, so that I can use it as voice assistant    |    high |
 |  | As a user, I want to fine-tune the voice clone’s intonation for different emotions (e.g., happy, sad, angry) so that it can deliver more expressive audio content.   |    low |
 
+## Progress tracker
+- Jira
+- conference
 
 ## UI/UX
 - Figma
@@ -35,6 +38,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Deployment: 
    - API -> EC2 -> DB instance
    - User management - cognitor
-   - Plan subrsciption - stripe    
+   - Plan subrsciption - stripe
 - CI/CD
   - Jenkins
+
+## Third Party API
+- Eleven labs
