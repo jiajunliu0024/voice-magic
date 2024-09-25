@@ -1,10 +1,14 @@
 # Getting Started with Create React App
 
+This project is all about voice magic:
+1.  voice cloning
+2.  text to voice
+   
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## API design
+![voice-magic-api](https://github.com/user-attachments/assets/26a74006-8c6f-41c1-a785-4835493583bb)
 
-In the project directory, you can run:
 
 ### `npm start`
 
