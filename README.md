@@ -20,6 +20,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 |  | As a user, I want to fine-tune the voice clone’s intonation for different emotions (e.g., happy, sad, angry) so that it can deliver more expressive audio content.   |    low |
 
 
+## UI/UX
+- Figma
+- MUI
+
 
 ## Frontend design
 - Language: JavaScrpt React CSS Html
