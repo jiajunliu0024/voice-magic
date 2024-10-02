@@ -4,11 +4,11 @@ import "./main.css";
 export default function Home() {
   return (
     <div className="h-screen w-full bg-gradient-to-b from-purple-100 to-blue-100 background-animate">
-      <div className="h-1/2 w-1/2 flex flex-col justify-center items-start">
-        <p className="text-black text-2xl font-bold">
+      <div className="h-1/2 w-1/2 flex flex-col justify-center items-start sm: h-full w-full">
+        <p className="text-black text-2xl font-bold text-left ml-5">
           Imagine your next AI voice assistant
         </p>
-        <p className="text-black">
+        <p className="text-black text-left ml-5">
           Pioneering research in Text to Speech, AI Voice Generator, and more
         </p>
       </div>
