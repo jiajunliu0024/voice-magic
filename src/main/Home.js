@@ -31,12 +31,15 @@ export default function Home() {
           cloning has significantly improved synthetic voice quality.
         </p>
         <div className="w-full mt-5 flex items-start">
-          <button className="ml-4 text-white bg-gray-900 border-10 py-3 px-6 focus:outline-none hover:bg-white hover:text-black hover:scale-110 transition duration-700 ease-in-out rounded-full text-base ">
+          <a
+            href="/dashboard"
+            className="ml-4 text-white bg-gray-900 border-10 py-3 px-6 focus:outline-none hover:bg-white hover:text-black hover:scale-110 transition duration-700 ease-in-out rounded-full text-base "
+          >
             Have a try
-          </button>
-          <button className="ml-4 text-white bg-gray-900 border-1 py-3 px-6 focus:outline-none hover:bg-gray-200 hover:text-white transition duration-700 ease-in-out rounded-full text-sm md:text-base ">
+          </a>
+          <a className="ml-4 text-white bg-gray-900 border-1 py-3 px-6 focus:outline-none hover:bg-gray-200 hover:text-white transition duration-700 ease-in-out rounded-full text-sm md:text-base ">
             join us in Voice Magic
-          </button>
+          </a>
         </div>
         <div className="mx-5 h-32 flex justify-center">
           <div id="bars">
