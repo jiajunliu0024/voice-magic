@@ -32,7 +32,7 @@ export default function Home() {
         </p>
         <div className="w-full mt-5 flex items-start">
           <a
-            href="/dashboard"
+            href="/pages/voice-clone"
             className="ml-4 text-white bg-gray-900 border-10 py-3 px-6 focus:outline-none hover:bg-white hover:text-black hover:scale-110 transition duration-700 ease-in-out rounded-full text-base "
           >
             Have a try

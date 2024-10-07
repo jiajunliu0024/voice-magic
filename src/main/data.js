@@ -1,10 +1,10 @@
 export const browseData = [
   {
-    url: "/text-to-speech",
+    url: "/pages/text-to-speech",
     text: "text to speech",
   },
   {
-    url: "/voice-clone",
+    url: "/pages/voice-clone",
     text: "voice clone",
   },
 ];
