@@ -31,29 +31,30 @@ export default function VoiceClone() {
       <Box className="w-screen h-full justfiy-center items-center">
         <DrawerHeader />
         <p>This is Voice Clone</p>
-        <div className="w-full h-auto flex border flex-col justify-center items-center px-5">
-          <textarea
-            className=" w-1/2 h-32 m-2 p-2 border border-gray-300 rounded-md"
-            placeholder="Enter your text here..."
-          ></textarea>
-
-          <div className="w-1/2 mb-1 grid grid-cols-2 gap-4">
-            <div className="flex flex-row  items-start">
-              <button className="bg-white hover:shadow-rounded border text-black font-bold py-1.5 px-4 rounded-full transition ease-in duration-300 text-sm">
-                select voice
-              </button>
-              <button onClick={handlePlay}>
-                {isPlaying ? (
-                  <PauseCircleFilledRoundedIcon fontSize="large" />
-                ) : (
-                  <PlayCircleRoundedIcon fontSize="large" />
-                )}
-              </button>
-            </div>
-            <div className="flex flex-col justify-center items-end">
-              <button className="bg-white  hover:shadow-rounded border  text-black font-bold py-1.5 px-4 rounded-full transition ease-in duration-300 text-sm">
-                generate voice
-              </button>
+        <div className="w-full h-auto justify-center">
+          <div className="w-auto flex border flex-col justify-center items-center px-5 ">
+            <textarea
+              className=" w-1/2 h-32 m-2 p-2 rounded-md"
+              placeholder="Enter your text here..."
+            ></textarea>
+            <div className="w-1/2 mb-1 grid grid-cols-2 gap-4">
+              <div className="flex flex-row  items-start">
+                <button className="bg-white hover:shadow-rounded border text-black font-bold py-1.5 px-4 rounded-full transition ease-in duration-300 text-sm">
+                  select voice
+                </button>
+                <button onClick={handlePlay}>
+                  {isPlaying ? (
+                    <PauseCircleFilledRoundedIcon fontSize="large" />
+                  ) : (
+                    <PlayCircleRoundedIcon fontSize="large" />
+                  )}
+                </button>
+              </div>
+              <div className="flex flex-col justify-center items-end">
+                <button className="bg-white  hover:shadow-rounded border  text-black font-bold py-1.5 px-4 rounded-full transition ease-in duration-300 text-sm">
+                  generate voice
+                </button>
+              </div>
             </div>
           </div>
         </div>
