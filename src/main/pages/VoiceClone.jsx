@@ -1,25 +1,20 @@
 import Box from "@mui/material/Box";
 import Sidebar from "../Sidebar";
 import DrawerHeader from "../components/DrawerHeader";
-import { createTheme } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
 import PlayCircleRoundedIcon from "@mui/icons-material/PlayCircleRounded";
 import PauseCircleFilledRoundedIcon from "@mui/icons-material/PauseCircleFilledRounded";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { useState } from "react";
 import "../main.css";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#000000",
-      // light: will be calculated from palette.primary.main,
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
-    },
-  },
-});
-
 export default function VoiceClone() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [charcount, setCharCount] = useState(0);
+  const [maxChar, setMaxChar] = useState(5000);
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const handlePlay = () => {
     isPlaying ? setIsPlaying(false) : setIsPlaying(true);
@@ -27,18 +22,21 @@ export default function VoiceClone() {
 
   return (
     <Box className="flex">
-      <Sidebar />
-      <Box className="w-screen h-full justfiy-center items-center">
+      {isSmallScreen ? <></> : <Sidebar className="" />}
+      <Box className="w-screen h-full flex flex-col justfiy-center items-center">
         <DrawerHeader />
-        <p>This is Voice Clone</p>
-        <div className="w-full h-auto justify-center">
-          <div className="w-auto flex border flex-col justify-center items-center px-5 ">
-            <textarea
-              className=" w-1/2 h-32 m-2 p-2 rounded-md"
-              placeholder="Enter your text here..."
-            ></textarea>
-            <div className="w-1/2 mb-1 grid grid-cols-2 gap-4">
-              <div className="flex flex-row  items-start">
+        <div className="w-full mt-10 h-auto flex flex-col justify-center items-center">
+          <div className="w-full md:w-3/4 md:border lg:w-1/2 lg:border flex flex-col md:shadow justify-center items-center px-5 py-5 rounded-xl">
+            <TextField
+              id="outlined-multiline-static"
+              className="w-full h-64 m-2 p-2 rounded-md"
+              // label="Multiline"
+              multiline
+              rows={9}
+              defaultValue="Start typing here or paste any text..."
+            />
+            <div className="w-full mb-1 mt-2 grid grid-cols-2 ">
+              <div className="flex flex-row gap-2 items-center">
                 <button className="bg-white hover:shadow-rounded border text-black font-bold py-1.5 px-4 rounded-full transition ease-in duration-300 text-sm">
                   select voice
                 </button>
@@ -50,8 +48,11 @@ export default function VoiceClone() {
                   )}
                 </button>
               </div>
-              <div className="flex flex-col justify-center items-end">
-                <button className="bg-white  hover:shadow-rounded border  text-black font-bold py-1.5 px-4 rounded-full transition ease-in duration-300 text-sm">
+              <div className="flex flex-row justify-end items-center">
+                <p className="mr-2">
+                  {charcount} / {maxChar}
+                </p>
+                <button className="bg-black hover:shadow-rounded border  text-white  py-1.5 px-4 rounded-full transition ease-in duration-300 text-sm">
                   generate voice
                 </button>
               </div>
