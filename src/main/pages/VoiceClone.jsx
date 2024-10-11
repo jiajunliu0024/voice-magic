@@ -6,19 +6,27 @@ import PlayCircleRoundedIcon from "@mui/icons-material/PlayCircleRounded";
 import PauseCircleFilledRoundedIcon from "@mui/icons-material/PauseCircleFilledRounded";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../main.css";
 
 export default function VoiceClone() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [charcount, setCharCount] = useState(0);
   const [maxChar, setMaxChar] = useState(5000);
+  const [enter, setEnter] = useState(true);
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const handlePlay = () => {
     isPlaying ? setIsPlaying(false) : setIsPlaying(true);
   };
+  const handleOnclickText = () => {
+    setEnter(true);
+  };
+
+  useEffect(() => {
+    console.log("Enter", enter);
+  }, [enter]);
 
   return (
     <Box className="flex">
@@ -26,14 +34,20 @@ export default function VoiceClone() {
       <Box className="w-screen h-full flex flex-col justfiy-center items-center">
         <DrawerHeader />
         <div className="w-full mt-10 h-auto flex flex-col justify-center items-center">
-          <div className="w-full md:w-3/4 md:border lg:w-1/2 lg:border flex flex-col md:shadow justify-center items-center px-5 py-5 rounded-xl">
+          <div
+            className={`w-full md:w-3/4 lg:w-1/2 flex flex-col justify-center items-center px-5 py-5 rounded-xl md:border-spacing-1 md:shadow-lg`}
+          >
             <TextField
               id="outlined-multiline-static"
               className="w-full h-64 m-2 p-2 rounded-md"
-              // label="Multiline"
               multiline
               rows={9}
               defaultValue="Start typing here or paste any text..."
+              variant="outlined"
+              onClick={handleOnclickText}
+              sx={{
+                "& fieldset": { border: "none" },
+              }}
             />
             <div className="w-full mb-1 mt-2 grid grid-cols-2 ">
               <div className="flex flex-row gap-2 items-center">

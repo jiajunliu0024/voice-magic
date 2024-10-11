@@ -6,8 +6,12 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { autocompleteClasses } from "@mui/material";
 
 export default function ButtonAppBar() {
+  const [open, setOpen] = React.useState(false);
+  const handleDrawerOpen = () => {};
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -28,6 +32,7 @@ export default function ButtonAppBar() {
               {
                 color: "black",
                 marginRight: 5,
+                ml: "auto",
               },
               open && { display: "none" },
             ]}
